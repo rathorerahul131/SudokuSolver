@@ -66,20 +66,16 @@ def solveSudoku(puzzle):
     return False
 
 if __name__ == "__main__":
-    example_board = [
-        [3,9,-1,  -1,5,-1, -1,-1,-1],
-        [-1,-1,-1,  2,-1,-1,  -1,-1,5],
-        [-1,-1,-1, 7,1,9,  -1,8,-1],
+    sudoku = []
+    size = int(input("Enter size of the sudoku, e.g. if it is 3x3 then enter only 3"))
+    print("Enter the values, enter -1 in place of blank")
+    for r in range(size):
+        rows = []
+        for c in range(size):
+            rows.append(int(input()))
+        sudoku.append(rows)
 
-        [-1,5,-1, -1,6,8,  -1,-1,-1],
-        [2,-1,6,  -1,-1,3,  -1,-1,-1],
-        [-1,-1,-1,  -1,-1,-1,  -1,-1,4],
-
-        [5,-1,-1, -1,-1,-1,  -1,-1,-1],
-        [6,7,-1,  1,-1,5,  -1,4,-1],
-        [1,-1,9,  -1,-1,-1 , 2,-1,-1]
-                    ]
-
-    print(solveSudoku(example_board))
-    print(example_board)
+    print(sudoku)
+    print(solveSudoku(sudoku))
+    print(sudoku)
 
